@@ -1,4 +1,4 @@
--- Select relevant columns from supplier for those supplying three or more products
+-- Select relevant columns from supplier for those supplying more than one product
 SELECT SUP.*
 FROM supplier AS SUP
 WHERE SUP.SUPP_ID IN
@@ -6,5 +6,5 @@ WHERE SUP.SUPP_ID IN
     SELECT SP.SUPP_ID
     FROM supplier_pricing AS SP
     GROUP BY SP.SUPP_ID
-    HAVING COUNT(SP.SUPP_ID) >= 3
+    HAVING COUNT(SP.SUPP_ID) > 1
 );
