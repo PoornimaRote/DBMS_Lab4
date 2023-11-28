@@ -1,0 +1,8 @@
+use e_comm;
+INSERT INTO CATEGORY (CAT_ID, CAT_NAME)
+VALUES
+(1, 'BOOKS'),
+(2, 'GAMES'),
+(3, 'GROCERIES'),
+(4, 'ELECTRONICS'),
+(5, 'CLOTHES');
